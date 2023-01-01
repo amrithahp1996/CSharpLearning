@@ -17,6 +17,16 @@
         Console.WriteLine("Sorted array:");
         PrintArray(arr);
 
+        int x =  Array.BinarySearch(arr, 2); //Array must be sorted before using BinarySearch
+        if (x < 0)
+        {
+            Console.WriteLine("BinarySearch element not found");
+        }
+        else
+        {
+            Console.WriteLine($"BinarySearch element found index is: {x}");
+        }
+
         //Reverse an array
         Array.Reverse(arr);
         Console.WriteLine("Reversed array");
@@ -34,6 +44,9 @@
         Console.WriteLine("Copied array arr2 is: ");
         PrintArray(arr2);
 
+        Array.Clear(arr);
+        PrintArray(arr);  // 0 0 is returned empty array with no data.
 
+       // arr.CopyTo()
     }
 }
